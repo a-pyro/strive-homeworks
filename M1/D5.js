@@ -102,7 +102,7 @@ function splitMe(str) {
 let splitMe2 = (str) => str.split(' ');
 let splitMe3 = (str) => console.log(str.split(' '));;
 
-// console.log(splitMe('Sphynx cats rocks!'));
+console.log(splitMe('Sphynx cats rocks!'));
 // console.log(splitMe2('Morty is the cutest sphynx cat'));
 // splitMe3('ciao questa è la terza prova')
 
@@ -210,14 +210,14 @@ function RollTheDices(num) {
   };
   for (let i = 0; i < num; i++) {
     let roll = dice();
-    diceRoll.sum = diceRoll.sum + roll;
+    diceRoll.sum += roll;
     diceRoll.values.push(roll)
 
   }
   return diceRoll;
 }
 
-// console.log(RollTheDices(5));
+console.log(RollTheDices(5));
 
 /* Ex.9
    Write the function HowManyDays that receives a Date and return the number of days that has passed since that day.
