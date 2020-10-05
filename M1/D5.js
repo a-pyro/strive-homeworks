@@ -25,6 +25,7 @@ let sum = 10 + 20;
     Create a variable random that contains a random number between 0 and 20 (should be randomly created at each execution)
 */
 
+
 let random = Math.floor((Math.random() * 20));
 // console.log(random);
 
@@ -102,7 +103,7 @@ function splitMe(str) {
 let splitMe2 = (str) => str.split(' ');
 let splitMe3 = (str) => console.log(str.split(' '));;
 
-console.log(splitMe('Sphynx cats rocks!'));
+// console.log(splitMe('Sphynx cats rocks!'));
 // console.log(splitMe2('Morty is the cutest sphynx cat'));
 // splitMe3('ciao questa è la terza prova')
 
@@ -149,9 +150,21 @@ function isThisAnEmail(string) {
   // if the @is missing the email it's not valid
   // if the .something is missing the email it's not valid
   // the 2 previous cond must be both true
+  // the .must be after the @ (slice)
+  if (string.indexOf('@') !== -1 && string.slice(string.indexOf('@', 0) + 1).includes('.com')) {
+    return true
+  } else {
+    return false
+  }
+
 }
 
-
+// console.log(isThisAnEmail('string@sd.com'));
+// let email = 'ciao@gmail.com';
+// console.log(email.slice(email.indexOf('@', 0)));
+// console.log(email.includes('@'));
+// console.log(email.includes('.' + ''));
+// console.log(email.match(/[.com]/g));
 /* Ex.7
    Write the function WhatDayIsIt that should return the day of the week
 */
@@ -217,7 +230,7 @@ function RollTheDices(num) {
   return diceRoll;
 }
 
-console.log(RollTheDices(5));
+// console.log(RollTheDices(5));
 
 /* Ex.9
    Write the function HowManyDays that receives a Date and return the number of days that has passed since that day.
@@ -562,8 +575,13 @@ function deleteX(num) {
 */
 
 function halfTree(height) {
-
+  let char = '*'
+  for (let i = 1; i <= height; i++) {
+    console.log(char.repeat(i));
+  }
 }
+// halfTree(5)
+
 
 /* Ex.22 
   Create a function Tree that receives the height and creates an "*" tree with that height
@@ -574,6 +592,20 @@ function halfTree(height) {
   *****
 */
 
+// function tree(height) {
+//   const char = '0';
+//   const space = ' ';
+//   for (i = 1; i <= height; i++) {
+//     console.log(object);
+//   }
+
+// }
+
 /* Ex.23
   Create a function IsItPrime that receives a number and return true if the number is a prime number
 */
+
+isItPrime = (num) => {
+  if (num % === 0 && )
+}
+isItPrime()
