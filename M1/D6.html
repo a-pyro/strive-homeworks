@@ -149,8 +149,15 @@
 
         function changeBgColor() {
             let color = prompt('What color do you prefer?');
+            document.body.style.backgroundColor = color;
+            // let choice = prompt(`Would you like to pick a color or go random?`)
+            // let randomColor = Math.floor(Math.random() * 256)
+            // if (choice === 'random') {
+            //     document.body.style.backgroundColor = `#($(randomColor),$(randomColor),$(randomColor))`
+            // } else {
+            //     document.body.style.backgroundColor = choice;
+            // }
 
-            document.body.style.backgroundColor = color
         }
 
 

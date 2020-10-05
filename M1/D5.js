@@ -605,7 +605,7 @@ function halfTree(height) {
   Create a function IsItPrime that receives a number and return true if the number is a prime number
 */
 
-isItPrime = (num) => {
-  if (num % === 0 && )
-}
-isItPrime()
+// isItPrime = (num) => {
+//   if (num % === 0 && )
+// }
+// isItPrime()
