@@ -1,0 +1,176 @@
+<!--
+        You have been assigned to the creation of a Smartphone Shop Website.
+        The shop is just a showcase of the products of the shop with some extra informations.
+        No shopping cart / checkout features are required.
+        EX1.:
+        Add H1 title with the name of the shop
+        EX2.: 
+        Add a TABLE with the top 5 products of the shop
+        EX3.: 
+        Each product should have one image, title, description and price
+        EX4.:
+        Add Map to the shop 
+        EX5.: 
+        Add the links to Amazon products for each item in the table
+        EX6.:
+        Add a footer with the address and the name of the shop
+        EX7.: 
+        Add a message board where the user can type a message in it (only client side)
+        // EXTRA 
+        EX8.: 
+        Write a function to change the heading text
+        EX9.:
+        Write a function to change the page background color
+        EX10.:
+        Write a function to change the footer address with a fake one
+    -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartShop - Find your Connection</title>
+</head>
+
+<body>
+    <header>
+        <h1 id="shop-id">SmartShop </h1>
+        <hr>
+    </header>
+
+    <section>
+        <table>
+            <h2>
+                Our Picks
+            </h2>
+            <tbody>
+                <tr>
+                    <th>iPhone 11 Pro</th>
+                    <th>Samsung Galaxy S20</th>
+                    <th>Motorola Rzr</th>
+                    <th>iPhone SE</th>
+                    <th>Nokia 3310</th>
+                </tr>
+                <tr>
+                    <td><img src="https://images.eprice.it/nobrand/0/hres/093/208851093/DAM208851093-0-ffd00aeb-c469-4847-9b09-704e53e85953.jpg"
+                            alt="" width="150"></td>
+                    <td><img src="https://images-na.ssl-images-amazon.com/images/I/71Nq1XZzu2L._AC_SX466_.jpg" alt=""
+                            width="120"></td>
+                    <td><img src="https://asset.mediaw.it/wcsstore/MMCatalogAssetStore/asset/images/12/84/128436.jpg"
+                            width="200" alt=""></td>
+                    <td><img src="https://images-na.ssl-images-amazon.com/images/I/817NmEWIdwL._AC_SX522_.jpg"
+                            width="100" alt=""></td>
+                    <td><img src="https://images-na.ssl-images-amazon.com/images/I/416Q02GR0ZL._AC_.jpg" width="80"
+                            alt=""></td>
+                </tr>
+                <tr>
+                    <td>Flagship of Apple, Inc. One of the best products on the market. And also stylish.</td>
+                    <td>Flagship of Samsung. Great evolution for one of the most popular Android smartphones. Great
+                        hardware.</td>
+                    <td>Motorola gives new life to an old glory. For those who loved the Startak this is the best fit.
+                    </td>
+                    <td>The entry level for Apple smartphones. </td>
+                    <td>Directly from the time machine the old good Nokia. Strong as rock, if you throw it away it could
+                        smash a wall</td>
+                </tr>
+                <tr>
+                    <td>10€</td>
+                    <td>8€</td>
+                    <td>9.5€</td>
+                    <td>6€</td>
+                    <td>1€</td>
+                </tr>
+                <tr>
+                    <td><a
+                            href="https://www.amazon.it/Apple-iPhone-11-Pro-64GB/dp/B07XS3ZX16/ref=sr_1_1_sspa?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2UVTF9W9G0MT3&dchild=1&keywords=iphone+11+pro&qid=1601903144&sprefix=iph%2Caps%2C172&sr=8-1-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUE4MkxKMUoxQlpFMjImZW5jcnlwdGVkSWQ9QTAwNDYzMTEzR0JQTlpESUdNVE41JmVuY3J5cHRlZEFkSWQ9QTA5MzE5NTMyOFFMU1haVlVRVjRJJndpZGdldE5hbWU9c3BfYXRmJmFjdGlvbj1jbGlja1JlZGlyZWN0JmRvTm90TG9nQ2xpY2s9dHJ1ZQ==">Buy
+                            on Amazon</a>
+                    </td>
+                    <td><a
+                            href="https://www.amazon.it/Samsung-Smartphone-Fotocamere-Posteriori-Espandibili/dp/B084LFG1DW/ref=sr_1_2?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=galaxy+s20&qid=1601903238&quartzVehicle=36-496&replacementKeywords=s20&sr=8-2">Buy
+                            on Amazon</a>
+                    </td>
+                    <td><a
+                            href="https://www.amazon.it/Motorola-5G-flessibile-fotocamera-Snapdragon/dp/B07KVVWBK1/ref=sr_1_1_sspa?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=motorola+razr&qid=1601903365&sr=8-1-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUEzUjYyTUJCMllPQVBUJmVuY3J5cHRlZElkPUEwMTAxMjEwMUI3RzdVNU9aS1FJVSZlbmNyeXB0ZWRBZElkPUEwMjAwODU4RjBCWFlQVzdDSU9IJndpZGdldE5hbWU9c3BfYXRmJmFjdGlvbj1jbGlja1JlZGlyZWN0JmRvTm90TG9nQ2xpY2s9dHJ1ZQ==">Buy
+                            on Amazon</a>
+                    </td>
+                    <td><a
+                            href="https://www.amazon.it/Nuovo-Apple-iPhone-SE-64GB/dp/B0876168Z5/ref=sr_1_1_sspa?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=iphone+se&qid=1601903391&quartzVehicle=907-1786&replacementKeywords=iphone&sr=8-1-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUFQOUhQSlNENUQzRUEmZW5jcnlwdGVkSWQ9QTA5NzE4NjQzRkk4Nk03QlFXSkJSJmVuY3J5cHRlZEFkSWQ9QTA4Mjc5MTExWDNZTU5NODBCOVZXJndpZGdldE5hbWU9c3BfYXRmJmFjdGlvbj1jbGlja1JlZGlyZWN0JmRvTm90TG9nQ2xpY2s9dHJ1ZQ==">Buy
+                            on Amazon</a>
+                    </td>
+                    <td><a
+                            href="https://www.amazon.it/Nokia-Facile-Utilizzo-Ricondizionato-Certificato/dp/B07BBW6Z2F/ref=sr_1_5?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=nokia+3310&qid=1601903408&sr=8-5">Buy
+                            on Amazon</a>
+                    </td>
+
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+
+    <h3>Our Store</h3>
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d237860.52055091597!2d-157.93916127339057!3d21.32797577817336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7c00183b8cc3464d%3A0x4b28f55ff3a7976c!2sHonolulu%2C%20Hawaii%2C%20Stati%20Uniti!5e0!3m2!1sit!2sit!4v1601902979455!5m2!1sit!2sit"
+        width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+        tabindex="0"></iframe>
+
+    <!-- <form action=""> -->
+    <label for="user-message">Leave a message</label>
+    <br>
+    <textarea name="user-message" id="user-message" cols="30" rows="10"></textarea>
+    <br>
+    <button type="submit">Submit</button>
+    <button id="change-h1" onclick="changeHeading()">Change Heading</button>
+    <button id="change-footer" onclick="changeFooter()">Change footer</button>
+    <button id="change-bg" onclick="changeBgColor()">Change BG-Color</button>
+    <!-- </form> -->
+
+
+    <footer id=" footer">
+        <p>SmartShop Inc, <span id="address">Honolulu , Hawaii, USA</span> </p>
+    </footer>
+    <!--  EXTRA 
+    EX8.: 
+    Write a function to change the heading text
+    EX9.:
+    Write a function to change the page background color
+    EX10.:
+    Write a function to change the footer address with a fake one -->
+    <script src="M1-D7.js"></script>
+    <script>
+        function changeHeading() {
+            let heading = document.querySelector('#shop-id');
+
+            let change = prompt(`What do you wanna write?`)
+            heading.innerText = change
+        }
+        // let changeH1 = document.querySelector('#change-h1');
+        // changeH1.addEventListener('click', changeHeading())
+
+
+        function changeBgColor() {
+            let color = prompt('What color do you prefer?');
+            document.body.style.backgroundColor = color;
+            // let choice = prompt(`Would you like to pick a color or go random?`)
+            // let randomColor = Math.floor(Math.random() * 256)
+            // if (choice === 'random') {
+            //     document.body.style.backgroundColor = `#($(randomColor),$(randomColor),$(randomColor))`
+            // } else {
+            //     document.body.style.backgroundColor = choice;
+            // }
+
+        }
+
+
+        function changeFooter() {
+            let address = document.querySelector('#address')
+            let newAddress = `Bora Bora Bora Bora Bora Bora, Heaven`;
+            address.innerText = newAddress;
+        }
+    </script>
+
+
+</body>
+
+</html>
