@@ -12,17 +12,26 @@ window.onload = function () {
     document.querySelector('#ex-6 button').onclick = addToTheSecond;
     document.querySelector('#ex-7 button').onclick = firstUlDisappear;
     document.querySelector('#ex-8 button').onclick = paintItGreen;
-    // !document.querySelectorAll('th').forEach(addEventListener('mouseenter', makeThemMagnifiable))
+
     document.querySelector('#ex-10').onclick = toggleShowImages;
     // ex.11
     document.querySelector('#spin-my-color').onclick = makeItClickable;
+    // ex.9 
+    /*
+    let arrayOfTableElements = document.querySelectorAll('.magnifier');
+    arrayOfTableElements.forEach((element) => {
+        element.addEventListener('mouseenter', makeThemMagnifiable)
+    })
+    */
+
+
 
 };
 /* EXERCISE 2
     Write a function to change the Title of the page in something else (execute the function in browser console)
 */
 const changeTitle = function (newTitle) {
-    let title = document.querySelector('#shop-id')
+    let title = document.querySelector('title')
     title.innerText = newTitle
 };
 /* EXERCISE 3a
@@ -110,17 +119,84 @@ const paintItGreen = function () {
     HINT use mouseenter / mouseleave events
 */
 const makeThemMagnifiable = function () {
-    // !let tHead = document.querySelector('th')
-    // let tData = document.querySelectorAll('td')
-    // tHead.classList.add('magnified')
-    // for (let i = 0; i < tHead.length; i++) {
-    //     tHead[i].classList.add('magnified')
-    // }
+    // creating array of elements
+    let arrayToMagnify = document.querySelectorAll('.magnifier');
+    // looping through each element
+    // adding event
+    // updating class on event trigger
+    // looping again to do the the same process with mouseleave
+    for (let i = 0; i < arrayToMagnify.length; i++) {
+        arrayToMagnify[i].addEventListener('mouseenter', () => {
+            arrayToMagnify[i].classList.add('magnified-rem')
+        })
 
-    // for (let i = 0; i < tData.length; i++) {
-    //     tData[i].classList.add('magnified')
+    }
+    for (let i = 0; i < arrayToMagnify.length; i++) {
+        arrayToMagnify[i].addEventListener('mouseleave', () => {
+            arrayToMagnify[i].classList.remove('magnified-rem')
+        })
+
+    }
+
+    // doesn't work because every element has already the event on it (added in window.onload) and when the event triggers it calls the function on each element, magnifying all of them
+    // for (i = 0; i < arrayToMagnify.length; i++) {
+
     // }
-};
+    // arrayToMagnify.style.fontSize = 'x-large';
+
+    // let minify = function () {
+    //     arrayToMagnify.forEach((elementToMinify) => {
+    //         elementToMinify.style.fontSize = 'initial'
+    //     })
+    // };
+
+    // arrayToMagnify.forEach((elementToMagnify) => {
+    //     elementToMagnify.style.fontSize = 'x-large'
+    // })
+}
+
+makeThemMagnifiable()
+
+
+
+
+
+
+
+
+// elementToMagnify.classList.add('magnified-rem')
+
+
+
+
+// arrayToMagnify.forEach((elementToMinify) => {
+//     elementToMinify.addEventListener('mouseleave', minify)
+// }
+
+// let minify = () => {
+//     arrayToMagnify.forEach((elementToMinify) => {
+//         elementToMinify.style.fontSize = 'initial'
+//     })
+// }
+
+// arrayToMagnify.forEach((elementToMinify) => {
+//     elementToMinify.addEventListener('mouseleave', minify)
+// })
+
+
+
+
+// !let tHead = document.querySelector('th')
+// let tData = document.querySelectorAll('td')
+// tHead.classList.add('magnified')
+// for (let i = 0; i < tHead.length; i++) {
+//     tHead[i].classList.add('magnified')
+// }
+
+// for (let i = 0; i < tData.length; i++) {
+//     tData[i].classList.add('magnified')
+// }
+
 
 
 /* EXERCISE 10
@@ -144,7 +220,7 @@ const makeItClickable = function () {
     let randomGreen = Math.ceil(Math.random() * 255)
     let randomBlue = Math.ceil(Math.random() * 255)
     document.querySelector('#spin-my-color').style.color = `rgb(${randomRed},${randomGreen},${randomBlue})`
-    // 
+
 };
 
 /*EXERCISE 12
