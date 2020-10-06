@@ -31,6 +31,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SmartShop - Find your Connection</title>
+    <style>
+        .red-color {
+            color: red
+        }
+
+        #shop-id {
+            width: 150px;
+        }
+
+        .bg-green {
+            background-color: green;
+        }
+
+        .magnified {
+            font-size: 1.5rem;
+        }
+
+        .hide-img {
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -41,9 +62,10 @@
 
     <section>
         <table>
-            <h2>
-                Our Picks
+            <h2 id="spin-my-color">
+                Our Picks - click me!
             </h2>
+            <button id="ex-10">Show/hide imgs</button>
             <tbody>
                 <tr>
                     <th>iPhone 11 Pro</th>
@@ -110,21 +132,58 @@
 
 
     <h3>Our Store</h3>
-    <iframe
+    <!-- commented out because interfers with the alert message of ex1-d7
+    the alert pops out and immediately disappears -->
+    <!-- <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d237860.52055091597!2d-157.93916127339057!3d21.32797577817336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7c00183b8cc3464d%3A0x4b28f55ff3a7976c!2sHonolulu%2C%20Hawaii%2C%20Stati%20Uniti!5e0!3m2!1sit!2sit!4v1601902979455!5m2!1sit!2sit"
         width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
-        tabindex="0"></iframe>
+        tabindex="0"></iframe> -->
 
-    <!-- <form action=""> -->
+
     <label for="user-message">Leave a message</label>
     <br>
     <textarea name="user-message" id="user-message" cols="30" rows="10"></textarea>
+    <h2 id="listTitle">Todo List</h2>
+    <ul id="firstList">
+        <li>
+            <p>1st</p>
+        </li>
+        <li>2nd</li>
+        <li>3rd</li>
+    </ul>
+    <ul id="secondList">
+        <li>1st</li>
+        <li>2nd</li>
+        <li>3rd</li>
+    </ul>
+    <div>
+        <p>This text is just for the exercise</p>
+        <button id='ex-4'>Click for Ex-4</button>
+    </div>
+
+    <div id="ex-6">
+        <input type="text" placeholder="add new element to list2">
+        <button>Ex-6 Add element</button>
+    </div>
+
+    <div id="ex-7">
+        <button>Ex-7 HoudiniStyle</button>
+    </div>
+    <div id="ex-8">
+        <button>Ex-8 HulkStyle</button>
+    </div>
+
     <br>
-    <button type="submit">Submit</button>
+
+    <div>
+        <input type="text" placeholder="New list title">
+        <button id='ex-5'>Ex-5 Change list title</button>
+    </div>
+
     <button id="change-h1" onclick="changeHeading()">Change Heading</button>
     <button id="change-footer" onclick="changeFooter()">Change footer</button>
     <button id="change-bg" onclick="changeBgColor()">Change BG-Color</button>
-    <!-- </form> -->
+
 
 
     <footer id=" footer">
