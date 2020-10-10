@@ -423,6 +423,7 @@ const olderMovie = function () {
 }
 
 const olderMovieAlternative = function () {
+  // % smarter because cycles the array only one time
 
   let result = {
     year: 2100
@@ -455,17 +456,18 @@ let onlyTitles = () => {
   let titlesArray = [];
 
   // this works
-  for (let movie of movies) {
-    titlesArray.push(movie.Title);
-  }
-
-  // ! this not cannot read the title propriety, check again later
-  // for (let i = 0; movies.length; i++) {
-  //   titlesArray.push(movies[i]['Title']);
+  // for (let movie of movies) {
+  //   titlesArray.push(movie.Title);
   // }
+
+  // ! this not cannot read the title propriety, the i was missing in i < movie.length
+  for (let i = 0; i < movies.length; i++) {
+    let currentMovie = movies[i]
+    titlesArray.push(currentMovie.Title);
+  }
   return titlesArray;
 }
-// console.log(onlyTitles());
+console.log(onlyTitles());
 
 /* Ex.15
    Write the function OnlyThisMillennium that returns only the movies produced in this millennium
