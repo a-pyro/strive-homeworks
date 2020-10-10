@@ -405,7 +405,7 @@ const movies = [{
 */
 
 const olderMovie = function () {
-  console.log('i work: ', movies[0]['Year']);
+  // console.log('i work: ', movies[0]['Year']);
   for (let i = 0; i < movies.length; i++) {
     // all movie obects have year prop which need to be parsInt()
     // i can use bubble sort
@@ -422,7 +422,24 @@ const olderMovie = function () {
   return movies[0]
 }
 
-console.log(olderMovie());
+const olderMovieAlternative = function () {
+
+  let result = {
+    year: 2100
+  }
+  for (i = 0; i < movies.length; i++) {
+    let currentMovie = movies[i]
+    let currentYear = parseInt(currentMovie.Year)
+    if (currentYear < result.year) {
+      result = currentMovie
+    }
+  }
+  return result
+}
+
+
+// console.log(olderMovie());
+// console.log('OLDERMOVIE ALTERNATIVE', olderMovieAlternative());
 
 /* Ex.13
     Write the function CountMovies that returns the number of movies into the array
