@@ -557,7 +557,7 @@ function searchMovie(string) {
 
 
 }
-console.log(searchMovie('avengersfdf'));
+// console.log(searchMovie('avengers'));
 // console.log(searchMovie('random'));
 // console.log(searchMovie('random string'));
 
@@ -580,11 +580,9 @@ function searchAndDivide(string) {
 
   }
 
+  // could be done with includes as well
   return obj
-  // &need to check  for random strings
-  // if (obj.nonMatch.length === 0 && obj.match.length === 0) {
-  //   return 'string not found'
-  // } else {
+
 
 
   // }
