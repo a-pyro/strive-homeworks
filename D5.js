@@ -467,7 +467,7 @@ let onlyTitles = () => {
   }
   return titlesArray;
 }
-console.log(onlyTitles());
+// console.log(onlyTitles());
 
 /* Ex.15
    Write the function OnlyThisMillennium that returns only the movies produced in this millennium
@@ -487,7 +487,7 @@ function onlyThisMillennium() {
 };
 
 // console.log(onlyThisMillennium());
-// & check if can return titles outside of the array
+
 
 /* Ex.16 
     Write the function GetMovieById that receives an ID and returns the movie with the given ID
@@ -533,6 +533,7 @@ function sumYears() {
 */
 function searchMovie(string) {
   let arrayOfMovies = []
+  /*
   for (let movie of movies) {
     if ((movie.Title.toLowerCase()).indexOf(string.toLowerCase()) !== -1) {
       arrayOfMovies.push(movie.Title)
@@ -545,9 +546,19 @@ function searchMovie(string) {
   } else {
     return arrayOfMovies
   }
+  */
+  //  alternative
+  for (let movie of movies) {
+    if (movie.Title.toLowerCase().includes(string.toLowerCase())) {
+      arrayOfMovies.push(movie.Title)
+    }
+  }
+  return arrayOfMovies.length > 0 ? arrayOfMovies : 'search not found'
+
 
 }
-// console.log(searchMovie('lord'));
+console.log(searchMovie('avengersfdf'));
+// console.log(searchMovie('random'));
 // console.log(searchMovie('random string'));
 
 /* Ex.19
