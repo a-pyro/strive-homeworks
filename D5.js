@@ -404,9 +404,25 @@ const movies = [{
     Write the function OlderMovie that finds the older movie in the array
 */
 
-function olderMovie() {
+const olderMovie = function () {
+  console.log('i work: ', movies[0]['Year']);
+  for (let i = 0; i < movies.length; i++) {
+    // all movie obects have year prop which need to be parsInt()
+    // i can use bubble sort
+    for (let j = 0; j < movies.length - i - 1; j++) {
+      let temp = 0;
+      if (movies[j]['Year'] > movies[j + 1]['Year']) {
+        temp = movies[j]
+        movies[j] = movies[j + 1]
+        movies[j + 1] = temp
+      }
 
+    }
+  }
+  return movies[0]
 }
+
+console.log(olderMovie());
 
 /* Ex.13
     Write the function CountMovies that returns the number of movies into the array
